@@ -206,58 +206,6 @@ pcs:Pc0 a pcs:Pc ;
     tig:t8 pcs:Pc9 ;
     tig:t9 pcs:Pc10 .
 
-pcs:Pc10 a pcs:Pc ;
-    tig:i0 pcs:Pc2 ;
-    tig:i1 pcs:Pc3 ;
-    tig:i10 pcs:Pc0 ;
-    tig:i11 pcs:Pc1 ;
-    tig:i2 pcs:Pc4 ;
-    tig:i3 pcs:Pc5 ;
-    tig:i4 pcs:Pc6 ;
-    tig:i5 pcs:Pc7 ;
-    tig:i6 pcs:Pc8 ;
-    tig:i7 pcs:Pc9 ;
-    tig:i8 pcs:Pc10 ;
-    tig:i9 pcs:Pc11 ;
-    tig:t0 pcs:Pc10 ;
-    tig:t1 pcs:Pc11 ;
-    tig:t10 pcs:Pc8 ;
-    tig:t11 pcs:Pc9 ;
-    tig:t2 pcs:Pc0 ;
-    tig:t3 pcs:Pc1 ;
-    tig:t4 pcs:Pc2 ;
-    tig:t5 pcs:Pc3 ;
-    tig:t6 pcs:Pc4 ;
-    tig:t7 pcs:Pc5 ;
-    tig:t8 pcs:Pc6 ;
-    tig:t9 pcs:Pc7 .
-
-pcs:Pc11 a pcs:Pc ;
-    tig:i0 pcs:Pc1 ;
-    tig:i1 pcs:Pc2 ;
-    tig:i10 pcs:Pc11 ;
-    tig:i11 pcs:Pc0 ;
-    tig:i2 pcs:Pc3 ;
-    tig:i3 pcs:Pc4 ;
-    tig:i4 pcs:Pc5 ;
-    tig:i5 pcs:Pc6 ;
-    tig:i6 pcs:Pc7 ;
-    tig:i7 pcs:Pc8 ;
-    tig:i8 pcs:Pc9 ;
-    tig:i9 pcs:Pc10 ;
-    tig:t0 pcs:Pc11 ;
-    tig:t1 pcs:Pc0 ;
-    tig:t10 pcs:Pc9 ;
-    tig:t11 pcs:Pc10 ;
-    tig:t2 pcs:Pc1 ;
-    tig:t3 pcs:Pc2 ;
-    tig:t4 pcs:Pc3 ;
-    tig:t5 pcs:Pc4 ;
-    tig:t6 pcs:Pc5 ;
-    tig:t7 pcs:Pc6 ;
-    tig:t8 pcs:Pc7 ;
-    tig:t9 pcs:Pc8 .
-
 pcs:Pc2 a pcs:Pc ;
     tig:i0 pcs:Pc10 ;
     tig:i1 pcs:Pc11 ;
@@ -466,7 +414,7 @@ pcs:Pc9 a pcs:Pc ;
     tig:t8 pcs:Pc5 ;
     tig:t9 pcs:Pc6 .
 
-    pcs:Pc10 a pcs:Pc ;
+pcs:Pc10 a pcs:Pc ;
     tig:i0 pcs:Pc2 ;
     tig:i1 pcs:Pc3 ;
     tig:i10 pcs:Pc0 ;
@@ -492,7 +440,7 @@ pcs:Pc9 a pcs:Pc ;
     tig:t8 pcs:Pc6 ;
     tig:t9 pcs:Pc7 .
 
-    pcs:Pc11 a pcs:Pc ;
+pcs:Pc11 a pcs:Pc ;
     tig:i0 pcs:Pc1 ;
     tig:i1 pcs:Pc2 ;
     tig:i10 pcs:Pc11 ;
@@ -508,7 +456,7 @@ pcs:Pc9 a pcs:Pc ;
     tig:t0 pcs:Pc11 ;
     tig:t1 pcs:Pc0 ;
     tig:t10 pcs:Pc9 ;
-    tig:t11 pcs:Pc8 ;
+    tig:t11 pcs:Pc10 ;
     tig:t2 pcs:Pc1 ;
     tig:t3 pcs:Pc2 ;
     tig:t4 pcs:Pc3 ;
