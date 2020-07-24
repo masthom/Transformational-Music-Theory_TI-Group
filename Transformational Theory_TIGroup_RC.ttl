@@ -1,0 +1,470 @@
+@prefix pcs: <http://PitchClassSet.fun> . 
+@prefix tig: <http://TIGroup.fun> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+# Some general concepts (to be discussed):
+pcs:Pc a owl:Thing .
+pcs:Pitch rdfs:subClassOf pcs:Pc .
+pcs:Ic a owl:Thing .
+pcs:Interval rdfs:subClassOf pcs:Pci .
+pcs:Pci rdfs:subClassOf pcs:Ic .
+tig:transformation rdfs:subPropertyOf rdf:Property .
+tig:transposition rdfs:subPropertyOf tig:transformation ;
+      a owl:TransitiveProperty .
+tig:inversion rdfs:subPropertyOf tig:transformation .
+
+# undirected Pitch Class Intervals:
+pcs:Pci0 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci0 .
+pcs:Pci1 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci11 .
+pcs:Pci2 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci10 .
+pcs:Pci3 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci9 .
+pcs:Pci4 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci8 .
+pcs:Pci5 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci7 .
+pcs:Pci6 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci6 .
+pcs:Pci7 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci5 .         
+pcs:Pci8 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci4 .
+pcs:Pci9 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci3 .
+pcs:Pci10 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci2 .
+pcs:Pci11 a pcs:Pci ; 
+         owl:inverseOf pcs:Pci1 .
+
+# Transpositions and their relations to Pci:
+tig:t0 a tig:transposition ; 
+       tig:transposeBy pcs:Pci0 .
+tig:t1 a tig:transposition ; 
+       tig:transposeBy pcs:Pci1 .
+tig:t2 a tig:transposition ; 
+       tig:transposeBy pcs:Pci2 .
+tig:t3 a tig:transposition ; 
+       tig:transposeBy pcs:Pci3 .
+tig:t4 a tig:transposition ; 
+       tig:transposeBy pcs:Pci4 .
+tig:t5 a tig:transposition ; 
+       tig:transposeBy pcs:Pci5 .
+tig:t6 a tig:transposition ; 
+       tig:transposeBy pcs:Pci6 .
+tig:t7 a tig:transposition ; 
+       tig:transposeBy pcs:Pci7 .
+tig:t8 a tig:transposition ; 
+       tig:transposeBy pcs:Pci8 .
+tig:t9 a tig:transposition ; 
+       tig:transposeBy pcs:Pci9 .
+tig:t10 a tig:transposition ; 
+       tig:transposeBy pcs:Pci10 .
+tig:t11 a tig:transposition ; 
+       tig:transposeBy pcs:Pci11 .
+
+# Inversions and their relations to a Pc-axis (informal):
+tig:i0 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 pcs:Pc0 ;
+                        pcs:_PossibleAxis2 pcs:Pc6 ] .
+tig:i1 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis1 pcs:Pc0 ;
+                               pcs:_UpperPartOfAxis1 pcs:Pc1 ] ;
+                        pcs:_PossibleAxis2  
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis2 pcs:Pc6 ;
+                               pcs:_UpperPartOfAxis2 pcs:Pc7 ] ] .
+tig:i2 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 pcs:Pc1 ;
+                        pcs:_PossibleAxis2 pcs:Pc7 ] . 
+tig:i3 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis1 pcs:Pc1 ;
+                               pcs:_UpperPartOfAxis1 pcs:Pc2 ] ;
+                        pcs:_PossibleAxis2  
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis2 pcs:Pc7 ;
+                               pcs:_UpperPartOfAxis2 pcs:Pc8 ] ] .
+tig:i4 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 pcs:Pc2 ;
+                        pcs:_PossibleAxis2 pcs:Pc8 ] .
+tig:i5 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis1 pcs:Pc2 ;
+                               pcs:_UpperPartOfAxis1 pcs:Pc3 ] ;
+                        pcs:_PossibleAxis2  
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis2 pcs:Pc8 ;
+                               pcs:_UpperPartOfAxis2 pcs:Pc9 ] ] .
+tig:i6 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 pcs:Pc3 ;
+                        pcs:_PossibleAxis2 pcs:Pc9 ] .
+tig:i7 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis1 pcs:Pc3 ;
+                               pcs:_UpperPartOfAxis1 pcs:Pc4 ] ;
+                        pcs:_PossibleAxis2  
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis2 pcs:Pc9 ;
+                               pcs:_UpperPartOfAxis2 pcs:Pc10 ] ] .
+tig:i8 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 pcs:Pc4 ;
+                        pcs:_PossibleAxis2 pcs:Pc10 ] .
+tig:i9 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis1 pcs:Pc4 ;
+                               pcs:_UpperPartOfAxis1 pcs:Pc5 ] ;
+                        pcs:_PossibleAxis2  
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis2 pcs:Pc10 ;
+                               pcs:_UpperPartOfAxis2 pcs:Pc11 ] ] .
+tig:i10 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 pcs:Pc5 ;
+                        pcs:_PossibleAxis2 pcs:Pc11 ] .
+tig:i11 a tig:inversion ; 
+       tig:invertBy [ a rdf:Alt ; 
+                        pcs:_PossibleAxis1 
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis1 pcs:Pc5 ;
+                               pcs:_UpperPartOfAxis1 pcs:Pc6 ] ;
+                        pcs:_PossibleAxis2  
+                           [ a rdf:Bag ;
+                               pcs:_LowerPartOfAxis2 pcs:Pc11 ;
+                               pcs:_UpperPartOfAxis2 pcs:Pc0 ] ] .
+
+# TIGroup (Matrix):
+pcs:Pc0 a pcs:Pc ;
+    tig:t0 pcs:Pc0 ;
+    tig:t1 pcs:Pc1 ;
+    tig:t2 pcs:Pc2 ;
+    tig:t3 pcs:Pc3 ;
+    tig:t4 pcs:Pc4 ;
+    tig:t5 pcs:Pc5 ;
+    tig:t6 pcs:Pc6 ;
+    tig:t7 pcs:Pc7 ;
+    tig:t8 pcs:Pc8 ;
+    tig:t9 pcs:Pc9 ;
+    tig:t10 pcs:Pc10 ;
+    tig:t11 pcs:Pc11 ;
+    tig:i0 pcs:Pc0 ;
+    tig:i1 pcs:Pc1 ;
+    tig:i2 pcs:Pc2 ;
+    tig:i3 pcs:Pc3 ;
+    tig:i4 pcs:Pc4 ;
+    tig:i5 pcs:Pc5 ;
+    tig:i6 pcs:Pc6 ;
+    tig:i7 pcs:Pc7 ;
+    tig:i8 pcs:Pc8 ;
+    tig:i9 pcs:Pc9 ;
+    tig:i10 pcs:Pc10 ;
+    tig:i11 pcs:Pc11 .
+    
+    pcs:Pc1 a pcs:Pc ;
+    tig:i0 pcs:Pc11 ;
+    tig:i1 pcs:Pc0 ;
+    tig:i10 pcs:Pc9 ;
+    tig:i11 pcs:Pc10 ;
+    tig:i2 pcs:Pc1 ;
+    tig:i3 pcs:Pc2 ;
+    tig:i4 pcs:Pc3 ;
+    tig:i5 pcs:Pc4 ;
+    tig:i6 pcs:Pc5 ;
+    tig:i7 pcs:Pc6 ;
+    tig:i8 pcs:Pc7 ;
+    tig:i9 pcs:Pc8 ;
+    tig:t0 pcs:Pc1 ;
+    tig:t1 pcs:Pc2 ;
+    tig:t10 pcs:Pc11 ;
+    tig:t11 pcs:Pc0 ;
+    tig:t2 pcs:Pc3 ;
+    tig:t3 pcs:Pc4 ;
+    tig:t4 pcs:Pc5 ;
+    tig:t5 pcs:Pc6 ;
+    tig:t6 pcs:Pc7 ;
+    tig:t7 pcs:Pc8 ;
+    tig:t8 pcs:Pc9 ;
+    tig:t9 pcs:Pc10 .
+
+pcs:Pc2 a pcs:Pc ;
+    tig:i0 pcs:Pc10 ;
+    tig:i1 pcs:Pc11 ;
+    tig:i10 pcs:Pc8 ;
+    tig:i11 pcs:Pc9 ;
+    tig:i2 pcs:Pc0 ;
+    tig:i3 pcs:Pc1 ;
+    tig:i4 pcs:Pc2 ;
+    tig:i5 pcs:Pc3 ;
+    tig:i6 pcs:Pc4 ;
+    tig:i7 pcs:Pc5 ;
+    tig:i8 pcs:Pc6 ;
+    tig:i9 pcs:Pc7 ;
+    tig:t0 pcs:Pc2 ;
+    tig:t1 pcs:Pc3 ;
+    tig:t10 pcs:Pc0 ;
+    tig:t11 pcs:Pc1 ;
+    tig:t2 pcs:Pc4 ;
+    tig:t3 pcs:Pc5 ;
+    tig:t4 pcs:Pc6 ;
+    tig:t5 pcs:Pc7 ;
+    tig:t6 pcs:Pc8 ;
+    tig:t7 pcs:Pc9 ;
+    tig:t8 pcs:Pc10 ;
+    tig:t9 pcs:Pc11 .
+
+pcs:Pc3 a pcs:Pc ;
+    tig:i0 pcs:Pc9 ;
+    tig:i1 pcs:Pc10 ;
+    tig:i10 pcs:Pc7 ;
+    tig:i11 pcs:Pc8 ;
+    tig:i2 pcs:Pc11 ;
+    tig:i3 pcs:Pc0 ;
+    tig:i4 pcs:Pc1 ;
+    tig:i5 pcs:Pc2 ;
+    tig:i6 pcs:Pc3 ;
+    tig:i7 pcs:Pc4 ;
+    tig:i8 pcs:Pc5 ;
+    tig:i9 pcs:Pc6 ;
+    tig:t0 pcs:Pc3 ;
+    tig:t1 pcs:Pc4 ;
+    tig:t10 pcs:Pc1 ;
+    tig:t11 pcs:Pc2 ;
+    tig:t2 pcs:Pc5 ;
+    tig:t3 pcs:Pc6 ;
+    tig:t4 pcs:Pc7 ;
+    tig:t5 pcs:Pc8 ;
+    tig:t6 pcs:Pc9 ;
+    tig:t7 pcs:Pc10 ;
+    tig:t8 pcs:Pc11 ;
+    tig:t9 pcs:Pc0 .
+
+pcs:Pc4 a pcs:Pc ;
+    tig:i0 pcs:Pc8 ;
+    tig:i1 pcs:Pc9 ;
+    tig:i10 pcs:Pc6 ;
+    tig:i11 pcs:Pc7 ;
+    tig:i2 pcs:Pc10 ;
+    tig:i3 pcs:Pc11 ;
+    tig:i4 pcs:Pc0 ;
+    tig:i5 pcs:Pc1 ;
+    tig:i6 pcs:Pc2 ;
+    tig:i7 pcs:Pc3 ;
+    tig:i8 pcs:Pc4 ;
+    tig:i9 pcs:Pc5 ;
+    tig:t0 pcs:Pc4 ;
+    tig:t1 pcs:Pc5 ;
+    tig:t10 pcs:Pc2 ;
+    tig:t11 pcs:Pc3 ;
+    tig:t2 pcs:Pc6 ;
+    tig:t3 pcs:Pc7 ;
+    tig:t4 pcs:Pc8 ;
+    tig:t5 pcs:Pc9 ;
+    tig:t6 pcs:Pc10 ;
+    tig:t7 pcs:Pc11 ;
+    tig:t8 pcs:Pc0 ;
+    tig:t9 pcs:Pc1 .
+
+pcs:Pc5 a pcs:Pc ;
+    tig:i0 pcs:Pc7 ;
+    tig:i1 pcs:Pc8 ;
+    tig:i10 pcs:Pc5 ;
+    tig:i11 pcs:Pc6 ;
+    tig:i2 pcs:Pc9 ;
+    tig:i3 pcs:Pc10 ;
+    tig:i4 pcs:Pc11 ;
+    tig:i5 pcs:Pc0 ;
+    tig:i6 pcs:Pc1 ;
+    tig:i7 pcs:Pc2 ;
+    tig:i8 pcs:Pc3 ;
+    tig:i9 pcs:Pc4 ;
+    tig:t0 pcs:Pc5 ;
+    tig:t1 pcs:Pc6 ;
+    tig:t10 pcs:Pc3 ;
+    tig:t11 pcs:Pc4 ;
+    tig:t2 pcs:Pc7 ;
+    tig:t3 pcs:Pc8 ;
+    tig:t4 pcs:Pc9 ;
+    tig:t5 pcs:Pc10 ;
+    tig:t6 pcs:Pc11 ;
+    tig:t7 pcs:Pc0 ;
+    tig:t8 pcs:Pc1 ;
+    tig:t9 pcs:Pc2 .
+
+pcs:Pc6 a pcs:Pc ;
+    tig:i0 pcs:Pc6 ;
+    tig:i1 pcs:Pc7 ;
+    tig:i10 pcs:Pc4 ;
+    tig:i11 pcs:Pc5 ;
+    tig:i2 pcs:Pc8 ;
+    tig:i3 pcs:Pc9 ;
+    tig:i4 pcs:Pc10 ;
+    tig:i5 pcs:Pc11 ;
+    tig:i6 pcs:Pc0 ;
+    tig:i7 pcs:Pc1 ;
+    tig:i8 pcs:Pc2 ;
+    tig:i9 pcs:Pc3 ;
+    tig:t0 pcs:Pc6 ;
+    tig:t1 pcs:Pc7 ;
+    tig:t10 pcs:Pc4 ;
+    tig:t11 pcs:Pc5 ;
+    tig:t2 pcs:Pc8 ;
+    tig:t3 pcs:Pc9 ;
+    tig:t4 pcs:Pc10 ;
+    tig:t5 pcs:Pc11 ;
+    tig:t6 pcs:Pc0 ;
+    tig:t7 pcs:Pc1 ;
+    tig:t8 pcs:Pc2 ;
+    tig:t9 pcs:Pc3 .
+
+pcs:Pc7 a pcs:Pc ;
+    tig:i0 pcs:Pc5 ;
+    tig:i1 pcs:Pc6 ;
+    tig:i10 pcs:Pc3 ;
+    tig:i11 pcs:Pc4 ;
+    tig:i2 pcs:Pc7 ;
+    tig:i3 pcs:Pc8 ;
+    tig:i4 pcs:Pc9 ;
+    tig:i5 pcs:Pc10 ;
+    tig:i6 pcs:Pc11 ;
+    tig:i7 pcs:Pc0 ;
+    tig:i8 pcs:Pc1 ;
+    tig:i9 pcs:Pc2 ;
+    tig:t0 pcs:Pc7 ;
+    tig:t1 pcs:Pc8 ;
+    tig:t10 pcs:Pc5 ;
+    tig:t11 pcs:Pc6 ;
+    tig:t2 pcs:Pc9 ;
+    tig:t3 pcs:Pc10 ;
+    tig:t4 pcs:Pc11 ;
+    tig:t5 pcs:Pc0 ;
+    tig:t6 pcs:Pc1 ;
+    tig:t7 pcs:Pc2 ;
+    tig:t8 pcs:Pc3 ;
+    tig:t9 pcs:Pc4 .
+
+pcs:Pc8 a pcs:Pc ;
+    tig:i0 pcs:Pc4 ;
+    tig:i1 pcs:Pc5 ;
+    tig:i10 pcs:Pc2 ;
+    tig:i11 pcs:Pc3 ;
+    tig:i2 pcs:Pc6 ;
+    tig:i3 pcs:Pc7 ;
+    tig:i4 pcs:Pc8 ;
+    tig:i5 pcs:Pc9 ;
+    tig:i6 pcs:Pc10 ;
+    tig:i7 pcs:Pc11 ;
+    tig:i8 pcs:Pc0 ;
+    tig:i9 pcs:Pc1 ;
+    tig:t0 pcs:Pc8 ;
+    tig:t1 pcs:Pc9 ;
+    tig:t10 pcs:Pc6 ;
+    tig:t11 pcs:Pc7 ;
+    tig:t2 pcs:Pc10 ;
+    tig:t3 pcs:Pc11 ;
+    tig:t4 pcs:Pc0 ;
+    tig:t5 pcs:Pc1 ;
+    tig:t6 pcs:Pc2 ;
+    tig:t7 pcs:Pc3 ;
+    tig:t8 pcs:Pc4 ;
+    tig:t9 pcs:Pc5 .
+
+pcs:Pc9 a pcs:Pc ;
+    tig:i0 pcs:Pc3 ;
+    tig:i1 pcs:Pc4 ;
+    tig:i10 pcs:Pc1 ;
+    tig:i11 pcs:Pc2 ;
+    tig:i2 pcs:Pc5 ;
+    tig:i3 pcs:Pc6 ;
+    tig:i4 pcs:Pc7 ;
+    tig:i5 pcs:Pc8 ;
+    tig:i6 pcs:Pc9 ;
+    tig:i7 pcs:Pc10 ;
+    tig:i8 pcs:Pc11 ;
+    tig:i9 pcs:Pc0 ;
+    tig:t0 pcs:Pc9 ;
+    tig:t1 pcs:Pc10 ;
+    tig:t10 pcs:Pc7 ;
+    tig:t11 pcs:Pc8 ;
+    tig:t2 pcs:Pc11 ;
+    tig:t3 pcs:Pc0 ;
+    tig:t4 pcs:Pc1 ;
+    tig:t5 pcs:Pc2 ;
+    tig:t6 pcs:Pc3 ;
+    tig:t7 pcs:Pc4 ;
+    tig:t8 pcs:Pc5 ;
+    tig:t9 pcs:Pc6 .
+
+pcs:Pc10 a pcs:Pc ;
+    tig:i0 pcs:Pc2 ;
+    tig:i1 pcs:Pc3 ;
+    tig:i10 pcs:Pc0 ;
+    tig:i11 pcs:Pc1 ;
+    tig:i2 pcs:Pc4 ;
+    tig:i3 pcs:Pc5 ;
+    tig:i4 pcs:Pc6 ;
+    tig:i5 pcs:Pc7 ;
+    tig:i6 pcs:Pc8 ;
+    tig:i7 pcs:Pc9 ;
+    tig:i8 pcs:Pc10 ;
+    tig:i9 pcs:Pc11 ;
+    tig:t0 pcs:Pc10 ;
+    tig:t1 pcs:Pc11 ;
+    tig:t10 pcs:Pc8 ;
+    tig:t11 pcs:Pc9 ;
+    tig:t2 pcs:Pc0 ;
+    tig:t3 pcs:Pc1 ;
+    tig:t4 pcs:Pc2 ;
+    tig:t5 pcs:Pc3 ;
+    tig:t6 pcs:Pc4 ;
+    tig:t7 pcs:Pc5 ;
+    tig:t8 pcs:Pc6 ;
+    tig:t9 pcs:Pc7 .
+
+pcs:Pc11 a pcs:Pc ;
+    tig:i0 pcs:Pc1 ;
+    tig:i1 pcs:Pc2 ;
+    tig:i10 pcs:Pc11 ;
+    tig:i11 pcs:Pc0 ;
+    tig:i2 pcs:Pc3 ;
+    tig:i3 pcs:Pc4 ;
+    tig:i4 pcs:Pc5 ;
+    tig:i5 pcs:Pc6 ;
+    tig:i6 pcs:Pc7 ;
+    tig:i7 pcs:Pc8 ;
+    tig:i8 pcs:Pc9 ;
+    tig:i9 pcs:Pc10 ;
+    tig:t0 pcs:Pc11 ;
+    tig:t1 pcs:Pc0 ;
+    tig:t10 pcs:Pc9 ;
+    tig:t11 pcs:Pc10 ;
+    tig:t2 pcs:Pc1 ;
+    tig:t3 pcs:Pc2 ;
+    tig:t4 pcs:Pc3 ;
+    tig:t5 pcs:Pc4 ;
+    tig:t6 pcs:Pc5 ;
+    tig:t7 pcs:Pc6 ;
+    tig:t8 pcs:Pc7 ;
+    tig:t9 pcs:Pc8 .
+
+    # Row Classes:
+    pcs:Rc a owl:Thing .
