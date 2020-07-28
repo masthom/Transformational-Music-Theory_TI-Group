@@ -2,7 +2,7 @@
 @prefix tig: <http://TIGroup.fun> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 # Some general concepts (to be discussed):
 pcs:Pc a owl:Thing .
@@ -43,36 +43,50 @@ pcs:Pci11 a pcs:Pci ;
 
 # Transpositions and their relations to Pci:
 tig:t0 a tig:transposition ; 
+       owl:inverseOf tig:t0 ; 
        tig:transposeBy pcs:Pci0 .
 tig:t1 a tig:transposition ; 
+       owl:inverseOf tig:t11 ; 
        tig:transposeBy pcs:Pci1 .
 tig:t2 a tig:transposition ; 
+       owl:inverseOf tig:t10 ; 
        tig:transposeBy pcs:Pci2 .
 tig:t3 a tig:transposition ; 
+       owl:inverseOf tig:t9 ; 
        tig:transposeBy pcs:Pci3 .
 tig:t4 a tig:transposition ; 
+       owl:inverseOf tig:t8 ; 
        tig:transposeBy pcs:Pci4 .
 tig:t5 a tig:transposition ; 
+       owl:inverseOf tig:t7 ; 
        tig:transposeBy pcs:Pci5 .
 tig:t6 a tig:transposition ; 
+       owl:inverseOf tig:t6 ; 
        tig:transposeBy pcs:Pci6 .
 tig:t7 a tig:transposition ; 
+       owl:inverseOf tig:t5 ; 
        tig:transposeBy pcs:Pci7 .
 tig:t8 a tig:transposition ; 
+       owl:inverseOf tig:t4 ; 
        tig:transposeBy pcs:Pci8 .
 tig:t9 a tig:transposition ; 
+       owl:inverseOf tig:t3 ; 
        tig:transposeBy pcs:Pci9 .
 tig:t10 a tig:transposition ; 
+       owl:inverseOf tig:t2 ; 
        tig:transposeBy pcs:Pci10 .
 tig:t11 a tig:transposition ; 
+       owl:inverseOf tig:t1 ; 
        tig:transposeBy pcs:Pci11 .
 
 # Inversions and their relations to a Pc-axis (informal):
-tig:i0 a tig:inversion ; 
+tig:i0 a tig:inversion ; ##tig:i0 a shortcut for (tig:t0 + tig:t0)?
+       owl:inverseOf tig:i0 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 pcs:Pc0 ;
                         pcs:_PossibleAxis2 pcs:Pc6 ] .
-tig:i1 a tig:inversion ; 
+tig:i1 a tig:inversion ; ##tig:i1 a shortcut for (tig:t1 + tig:t11)?
+       owl:inverseOf tig:i1 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 
                            [ a rdf:Bag ;
@@ -83,10 +97,12 @@ tig:i1 a tig:inversion ;
                                pcs:_LowerPartOfAxis2 pcs:Pc6 ;
                                pcs:_UpperPartOfAxis2 pcs:Pc7 ] ] .
 tig:i2 a tig:inversion ; 
+       owl:inverseOf tig:i2 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 pcs:Pc1 ;
                         pcs:_PossibleAxis2 pcs:Pc7 ] . 
 tig:i3 a tig:inversion ; 
+       owl:inverseOf tig:i3 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 
                            [ a rdf:Bag ;
@@ -97,10 +113,12 @@ tig:i3 a tig:inversion ;
                                pcs:_LowerPartOfAxis2 pcs:Pc7 ;
                                pcs:_UpperPartOfAxis2 pcs:Pc8 ] ] .
 tig:i4 a tig:inversion ; 
+       owl:inverseOf tig:i4 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 pcs:Pc2 ;
                         pcs:_PossibleAxis2 pcs:Pc8 ] .
 tig:i5 a tig:inversion ; 
+       owl:inverseOf tig:i5 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 
                            [ a rdf:Bag ;
@@ -111,10 +129,12 @@ tig:i5 a tig:inversion ;
                                pcs:_LowerPartOfAxis2 pcs:Pc8 ;
                                pcs:_UpperPartOfAxis2 pcs:Pc9 ] ] .
 tig:i6 a tig:inversion ; 
+       owl:inverseOf tig:i6 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 pcs:Pc3 ;
                         pcs:_PossibleAxis2 pcs:Pc9 ] .
 tig:i7 a tig:inversion ; 
+       owl:inverseOf tig:i7 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 
                            [ a rdf:Bag ;
@@ -125,10 +145,12 @@ tig:i7 a tig:inversion ;
                                pcs:_LowerPartOfAxis2 pcs:Pc9 ;
                                pcs:_UpperPartOfAxis2 pcs:Pc10 ] ] .
 tig:i8 a tig:inversion ; 
+       owl:inverseOf tig:i8 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 pcs:Pc4 ;
                         pcs:_PossibleAxis2 pcs:Pc10 ] .
 tig:i9 a tig:inversion ; 
+       owl:inverseOf tig:i9 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 
                            [ a rdf:Bag ;
@@ -139,10 +161,12 @@ tig:i9 a tig:inversion ;
                                pcs:_LowerPartOfAxis2 pcs:Pc10 ;
                                pcs:_UpperPartOfAxis2 pcs:Pc11 ] ] .
 tig:i10 a tig:inversion ; 
+       owl:inverseOf tig:i10 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 pcs:Pc5 ;
                         pcs:_PossibleAxis2 pcs:Pc11 ] .
 tig:i11 a tig:inversion ; 
+       owl:inverseOf tig:i11 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 
                            [ a rdf:Bag ;
@@ -466,5 +490,244 @@ pcs:Pc11 a pcs:Pc ;
     tig:t8 pcs:Pc7 ;
     tig:t9 pcs:Pc8 .
 
-    # Row Classes:
-    pcs:Rc a owl:Thing .
+# Row Classes:
+pcs:Rc a owl:Thing ; 
+       pcs:hasRowLinks [ a rdf:Bag ;
+                           rdf:label "RowLinks";  
+       pcs:hasRowLinksPrime (tig:tRtP1_2 [ a rdf:Alt ;
+                                           rdf:label "tRtP1_2" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                             tig:tRtP2_3 [ a rdf:Alt ;
+                                           rdf:label "tRtP2_3" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]  
+                             tig:tRtP3_4 [ a rdf:Alt ;
+                                           rdf:label "tRtP3_4" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                             tig:tRtP4_5 [ a rdf:Alt ;
+                                           rdf:label "tRtP4_5" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
+                             tig:tRtP5_6 [ a rdf:Alt ;
+                                           rdf:label "tRtP5_6" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
+                             tig:tRtP6_7 [ a rdf:Alt ;
+                                           rdf:label "tRtP6_7" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                             tig:tRtP7_8 [ a rdf:Alt ;
+                                           rdf:label "tRtP7_8" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
+                             tig:tRtP8_9 [ a rdf:Alt ;
+                                           rdf:label "tRtP8_9" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
+                             tig:tRtP9_10 [ a rdf:Alt ;
+                                           rdf:label "tRtP9_10" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                             tig:tRtP10_11 [ a rdf:Alt ;
+                                           rdf:label "tRtP10_11" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
+                             tig:tRtP11_12 [ a rdf:Alt ;
+                                           rdf:label "tRtP11_12" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] ) ;
+       pcs:hasRowLinksInversion (tig:tRtI1_2 [ a rdf:Alt ;
+                                           rdf:label "tRtI1_2" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI2_3 [ a rdf:Alt ;
+                                           rdf:label "tRtI2_3" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI3_4 [ a rdf:Alt ;
+                                           rdf:label "tRtI3_4" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI4_5 [ a rdf:Alt ;
+                                           rdf:label "tRtI4_5" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI5_6 [ a rdf:Alt ;
+                                           rdf:label "tRtI5_6" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI6_7 [ a rdf:Alt ;
+                                           rdf:label "tRtI6_7" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI7_8 [ a rdf:Alt ;
+                                           rdf:label "tRtI7_8" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI8_9 [ a rdf:Alt ;
+                                           rdf:label "tRtI8_9" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI9_10 [ a rdf:Alt ;
+                                           rdf:label "tRtI9_10" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI10_11 [ a rdf:Alt ;
+                                           rdf:label "tRtI10_11" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
+                                 tig:tRtI11_12 [ a rdf:Alt ;
+                                           rdf:label "tRtI11_12" ;
+                                           rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] ) ] .
+
+tig:tRtP1_2 a tig:transposition ; 
+            owl:inverseOf tig:tRtI1_2 . 
+tig:tRtP2_3 a tig:transposition ; 
+            owl:inverseOf tig:tRtI2_3 .
+tig:tRtP3_4 a tig:transposition ; 
+            owl:inverseOf tig:tRtI3_4 .
+tig:tRtP4_5 a tig:transposition ; 
+            owl:inverseOf tig:tRtI4_5 .
+tig:tRtP5_6 a tig:transposition ; 
+            owl:inverseOf tig:tRtI5_6 .
+tig:tRtP6_7 a tig:transposition ; 
+            owl:inverseOf tig:tRtI6_7 .
+tig:tRtP7_8 a tig:transposition ; 
+            owl:inverseOf tig:tRtI7_8 .
+tig:tRtP8_9 a tig:transposition ; 
+            owl:inverseOf tig:tRtI8_9 .
+tig:tRtP9_10 a tig:transposition ; 
+            owl:inverseOf tig:tRtI9_10 .
+tig:tRtP10_11 a tig:transposition ; 
+            owl:inverseOf tig:tRtI9_10 .
+tig:tRtP11_12 a tig:transposition ; 
+            owl:inverseOf tig:tRtI9_10 .       
+tig:tRtI1_2 a tig:transposition ; 
+            owl:inverseOf tig:tRtP1_2 . 
+tig:tRtI2_3 a tig:transposition ; 
+            owl:inverseOf tig:tRtP2_3 .
+tig:tRtI3_4 a tig:transposition ; 
+            owl:inverseOf tig:tRtP3_4 .
+tig:tRtI4_5 a tig:transposition ; 
+            owl:inverseOf tig:tRtP4_5 .
+tig:tRtI5_6 a tig:transposition ; 
+            owl:inverseOf tig:tRtP5_6 .
+tig:tRtI6_7 a tig:transposition ; 
+            owl:inverseOf tig:tRtP6_7 .
+tig:tRtI7_8 a tig:transposition ; 
+            owl:inverseOf tig:tRtP7_8 .
+tig:tRtI8_9 a tig:transposition ; 
+            owl:inverseOf tig:tRtP8_9 .
+tig:tRtI9_10 a tig:transposition ; 
+            owl:inverseOf tig:tRtP9_10 .
+tig:tRtI10_11 a tig:transposition ; 
+            owl:inverseOf tig:tRtP10_11 .
+tig:tRtI11_12 a tig:transposition ; 
+            owl:inverseOf tig:tRtP11_12 .
+
+pcs:RForm rdfs:subClassOf pcs:Rc ; 
+          pcs:hasRowTonesPrime (pcs:RtP1  pcs:RtP2  pcs:RtP3 pcs:RtP4  pcs:RtP5 pcs:RtP6 pcs:RtP7  pcs:RtP8  pcs:RtP9 pcs:RtP10  pcs:RtP11  pcs:RtP12) ;
+          pcs:hasRowTonesRetrograde (pcs:RtR1  pcs:RtR2  pcs:RtR3 pcs:RtR4  pcs:RtR5 pcs:RtR6 pcs:RtR7  pcs:RtR8  pcs:RtR9 pcs:RtR10  pcs:RtR11  pcs:RtR12) ;
+          pcs:hasRowTonesInversion (pcs:RtI1  pcs:RtI2  pcs:RtI3 pcs:RtI4  pcs:RtI5 pcs:RtI6 pcs:RtI7  pcs:RtI8  pcs:RtI9 pcs:RtI10  pcs:RtI11  pcs:RtI12) ;
+          pcs:hasRowTonesRetrogradeInversion (pcs:RtRI1  pcs:RtRI2  pcs:RtRI3 pcs:RtRI4  pcs:RtRI5 pcs:RtRI6 pcs:RtRI7  pcs:RtRI8  pcs:RtRI9 pcs:RtRI10  pcs:RtRI11  pcs:RtRI12) .
+
+pcs:RPrimeForm rdfs:subClassOf pcs:RForm .
+pcs:RRetrogradeForm rdfs:subClassOf pcs:RForm .
+pcs:RInversionForm rdfs:subClassOf pcs:RForm .
+pcs:RRetrogradeInversionForm rdfs:subClassOf pcs:RForm .
+
+
+pcs:RP0 a pcs:RPrimeForm ; 
+        pcs:hasRtP1 pcs:Pc0 .##how to express the property in a more immanent way?
+pcs:RP1 a pcs:RPrimeForm . ##usw.
+
+pcs:RtP1 a pcs:Pc ; 
+       owl:sameAs pcs:RtR12 ; 
+       owl:sameAs pcs:RtI1 ; 
+       owl:sameAs pcs:RtRI12 . 
+pcs:RtP2 a pcs:Pc ; 
+       owl:sameAs pcs:RtR11 .
+pcs:RtP3 a pcs:Pc ; 
+       owl:sameAs pcs:RtR10 .
+pcs:RtP4 a pcs:Pc ; 
+       owl:sameAs pcs:RtR9 .
+pcs:RtP5 a pcs:Pc ; 
+       owl:sameAs pcs:RtR8 .
+pcs:RtP6 a pcs:Pc ; 
+       owl:sameAs pcs:RtR7 .
+pcs:RtP7 a pcs:Pc ; 
+       owl:sameAs pcs:RtR6 .
+pcs:RtP8 a pcs:Pc ; 
+       owl:sameAs pcs:RtR5 .
+pcs:RtP9 a pcs:Pc ; 
+       owl:sameAs pcs:RtR4 .
+pcs:RtP10 a pcs:Pc ; 
+       owl:sameAs pcs:RtR3 .
+pcs:RtP11 a pcs:Pc ; 
+       owl:sameAs pcs:RtR2 .
+pcs:RtP12 a pcs:Pc ; 
+       owl:sameAs pcs:RtR1 .
+
+pcs:RtR1 a pcs:Pc ; 
+       owl:sameAs pcs:RtP12 . 
+pcs:RtR2 a pcs:Pc ; 
+       owl:sameAs pcs:RtP11 .
+pcs:RtR3 a pcs:Pc ; 
+       owl:sameAs pcs:RtP10 .
+pcs:RtR4 a pcs:Pc ; 
+       owl:sameAs pcs:RtP9 .
+pcs:RtR5 a pcs:Pc ; 
+       owl:sameAs pcs:RtP8 .
+pcs:RtR6 a pcs:Pc ; 
+       owl:sameAs pcs:RtP7 .
+pcs:RtR7 a pcs:Pc ; 
+       owl:sameAs pcs:RtP6 .
+pcs:RtR8 a pcs:Pc ; 
+       owl:sameAs pcs:RtP5 .
+pcs:RtR9 a pcs:Pc ; 
+       owl:sameAs pcs:RtP4 .
+pcs:RtR10 a pcs:Pc ; 
+       owl:sameAs pcs:RtP3 .
+pcs:RtR11 a pcs:Pc ; 
+       owl:sameAs pcs:RtP2 .
+pcs:RtR12 a pcs:Pc ; 
+       owl:sameAs pcs:RtP1 ; 
+       owl:sameAs pcs:RtI1 ; 
+       owl:sameAs pcs:RtRI12 .
+
+pcs:RtI1 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI12 ; 
+       owl:sameAs pcs:RtP1 ; 
+       owl:sameAs pcs:RtR12 . 
+pcs:RtI2 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI11 .
+pcs:RtI3 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI10 .
+pcs:RtI4 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI9 .
+pcs:RtI5 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI8 .
+pcs:RtI6 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI7 .
+pcs:RtI7 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI6 .
+pcs:RtI8 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI5 .
+pcs:RtI9 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI4 .
+pcs:RtI10 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI3 .
+pcs:RtI11 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI2 .
+pcs:RtI12 a pcs:Pc ; 
+       owl:sameAs pcs:RtRI1 .
+
+pcs:RtRI1 a pcs:Pc ; 
+       owl:sameAs pcs:RtP12 . 
+pcs:RtRI2 a pcs:Pc ; 
+       owl:sameAs pcs:RtP11 .
+pcs:RtRI3 a pcs:Pc ; 
+       owl:sameAs pcs:RtP10 .
+pcs:RtRI4 a pcs:Pc ; 
+       owl:sameAs pcs:RtP9 .
+pcs:RtRI5 a pcs:Pc ; 
+       owl:sameAs pcs:RtP8 .
+pcs:RtRI6 a pcs:Pc ; 
+       owl:sameAs pcs:RtP7 .
+pcs:RtRI7 a pcs:Pc ; 
+       owl:sameAs pcs:RtP6 .
+pcs:RtRI8 a pcs:Pc ; 
+       owl:sameAs pcs:RtP5 .
+pcs:RtRI9 a pcs:Pc ; 
+       owl:sameAs pcs:RtP4 .
+pcs:RtRI10 a pcs:Pc ; 
+       owl:sameAs pcs:RtP3 .
+pcs:RtRI11 a pcs:Pc ; 
+       owl:sameAs pcs:RtP2 .
+pcs:RtRI12 a pcs:Pc ; 
+       owl:sameAs pcs:RtI1 ; 
+       owl:sameAs pcs:RtP1 ; 
+       owl:sameAs pcs:RtR12 .
+
+
