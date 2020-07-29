@@ -17,28 +17,40 @@ tig:inversion rdfs:subPropertyOf tig:transformation .
 
 # undirected Pitch Class Intervals:
 pcs:Pci0 a pcs:Pci ; 
+         rdf:value 0;
          owl:inverseOf pcs:Pci0 .
 pcs:Pci1 a pcs:Pci ; 
+         rdf:value 1; 
          owl:inverseOf pcs:Pci11 .
 pcs:Pci2 a pcs:Pci ; 
+         rdf:value 2; 
          owl:inverseOf pcs:Pci10 .
 pcs:Pci3 a pcs:Pci ; 
+         rdf:value 3; 
          owl:inverseOf pcs:Pci9 .
 pcs:Pci4 a pcs:Pci ; 
+         rdf:value 4; 
          owl:inverseOf pcs:Pci8 .
 pcs:Pci5 a pcs:Pci ; 
+         rdf:value 5; 
          owl:inverseOf pcs:Pci7 .
 pcs:Pci6 a pcs:Pci ; 
+         rdf:value 6; 
          owl:inverseOf pcs:Pci6 .
 pcs:Pci7 a pcs:Pci ; 
+         rdf:value 7; 
          owl:inverseOf pcs:Pci5 .         
 pcs:Pci8 a pcs:Pci ; 
+         rdf:value 8; 
          owl:inverseOf pcs:Pci4 .
 pcs:Pci9 a pcs:Pci ; 
+         rdf:value 9; 
          owl:inverseOf pcs:Pci3 .
 pcs:Pci10 a pcs:Pci ; 
+         rdf:value 10; 
          owl:inverseOf pcs:Pci2 .
 pcs:Pci11 a pcs:Pci ; 
+         rdf:value 11; 
          owl:inverseOf pcs:Pci1 .
 
 # Transpositions and their relations to Pci:
@@ -178,7 +190,8 @@ tig:i11 a tig:inversion ;
                                pcs:_UpperPartOfAxis2 pcs:Pc0 ] ] .
 
 # TIGroup (Matrix):
-pcs:Pc0 a pcs:Pc ;
+pcs:Pc0 a pcs:Pc ; 
+       rdf:value 0;
     tig:t0 pcs:Pc0 ;
     tig:t1 pcs:Pc1 ;
     tig:t2 pcs:Pc2 ;
@@ -204,7 +217,8 @@ pcs:Pc0 a pcs:Pc ;
     tig:i10 pcs:Pc10 ;
     tig:i11 pcs:Pc11 .
     
-    pcs:Pc1 a pcs:Pc ;
+    pcs:Pc1 a pcs:Pc ; 
+         rdf:value 1;
     tig:i0 pcs:Pc11 ;
     tig:i1 pcs:Pc0 ;
     tig:i10 pcs:Pc9 ;
@@ -230,7 +244,8 @@ pcs:Pc0 a pcs:Pc ;
     tig:t8 pcs:Pc9 ;
     tig:t9 pcs:Pc10 .
 
-pcs:Pc2 a pcs:Pc ;
+pcs:Pc2 a pcs:Pc ; 
+         rdf:value 2;
     tig:i0 pcs:Pc10 ;
     tig:i1 pcs:Pc11 ;
     tig:i10 pcs:Pc8 ;
@@ -256,7 +271,8 @@ pcs:Pc2 a pcs:Pc ;
     tig:t8 pcs:Pc10 ;
     tig:t9 pcs:Pc11 .
 
-pcs:Pc3 a pcs:Pc ;
+pcs:Pc3 a pcs:Pc ; 
+         rdf:value 3;
     tig:i0 pcs:Pc9 ;
     tig:i1 pcs:Pc10 ;
     tig:i10 pcs:Pc7 ;
@@ -282,7 +298,8 @@ pcs:Pc3 a pcs:Pc ;
     tig:t8 pcs:Pc11 ;
     tig:t9 pcs:Pc0 .
 
-pcs:Pc4 a pcs:Pc ;
+pcs:Pc4 a pcs:Pc ; 
+         rdf:value 4;
     tig:i0 pcs:Pc8 ;
     tig:i1 pcs:Pc9 ;
     tig:i10 pcs:Pc6 ;
@@ -308,7 +325,8 @@ pcs:Pc4 a pcs:Pc ;
     tig:t8 pcs:Pc0 ;
     tig:t9 pcs:Pc1 .
 
-pcs:Pc5 a pcs:Pc ;
+pcs:Pc5 a pcs:Pc ; 
+         rdf:value 5;
     tig:i0 pcs:Pc7 ;
     tig:i1 pcs:Pc8 ;
     tig:i10 pcs:Pc5 ;
@@ -334,7 +352,8 @@ pcs:Pc5 a pcs:Pc ;
     tig:t8 pcs:Pc1 ;
     tig:t9 pcs:Pc2 .
 
-pcs:Pc6 a pcs:Pc ;
+pcs:Pc6 a pcs:Pc ; 
+         rdf:value 6;
     tig:i0 pcs:Pc6 ;
     tig:i1 pcs:Pc7 ;
     tig:i10 pcs:Pc4 ;
@@ -360,7 +379,8 @@ pcs:Pc6 a pcs:Pc ;
     tig:t8 pcs:Pc2 ;
     tig:t9 pcs:Pc3 .
 
-pcs:Pc7 a pcs:Pc ;
+pcs:Pc7 a pcs:Pc ; 
+         rdf:value 7;
     tig:i0 pcs:Pc5 ;
     tig:i1 pcs:Pc6 ;
     tig:i10 pcs:Pc3 ;
@@ -386,7 +406,8 @@ pcs:Pc7 a pcs:Pc ;
     tig:t8 pcs:Pc3 ;
     tig:t9 pcs:Pc4 .
 
-pcs:Pc8 a pcs:Pc ;
+pcs:Pc8 a pcs:Pc ; 
+         rdf:value 8;
     tig:i0 pcs:Pc4 ;
     tig:i1 pcs:Pc5 ;
     tig:i10 pcs:Pc2 ;
@@ -412,7 +433,8 @@ pcs:Pc8 a pcs:Pc ;
     tig:t8 pcs:Pc4 ;
     tig:t9 pcs:Pc5 .
 
-pcs:Pc9 a pcs:Pc ;
+pcs:Pc9 a pcs:Pc ; 
+         rdf:value 9;
     tig:i0 pcs:Pc3 ;
     tig:i1 pcs:Pc4 ;
     tig:i10 pcs:Pc1 ;
@@ -438,7 +460,8 @@ pcs:Pc9 a pcs:Pc ;
     tig:t8 pcs:Pc5 ;
     tig:t9 pcs:Pc6 .
 
-pcs:Pc10 a pcs:Pc ;
+pcs:Pc10 a pcs:Pc ; 
+         rdf:value 10;
     tig:i0 pcs:Pc2 ;
     tig:i1 pcs:Pc3 ;
     tig:i10 pcs:Pc0 ;
@@ -464,7 +487,8 @@ pcs:Pc10 a pcs:Pc ;
     tig:t8 pcs:Pc6 ;
     tig:t9 pcs:Pc7 .
 
-pcs:Pc11 a pcs:Pc ;
+pcs:Pc11 a pcs:Pc ; 
+         rdf:value 11;
     tig:i0 pcs:Pc1 ;
     tig:i1 pcs:Pc2 ;
     tig:i10 pcs:Pc11 ;
