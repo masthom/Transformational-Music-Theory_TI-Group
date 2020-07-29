@@ -517,72 +517,72 @@ pcs:Pc11 a pcs:Pc ;
 # Row Classes:
 pcs:Rc a owl:Thing ; 
        pcs:hasRowLinks [ a rdf:Bag ;
-                           rdf:label "RowLinks";  
+                           rdfs:label "RowLinks";  
        pcs:hasRowLinksPrime (tig:tRtP1_2 [ a rdf:Alt ;
-                                           rdf:label "tRtP1_2" ;
+                                           rdfs:label "tRtP1_2" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                              tig:tRtP2_3 [ a rdf:Alt ;
-                                           rdf:label "tRtP2_3" ;
+                                           rdfs:label "tRtP2_3" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]  
                              tig:tRtP3_4 [ a rdf:Alt ;
-                                           rdf:label "tRtP3_4" ;
+                                           rdfs:label "tRtP3_4" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                              tig:tRtP4_5 [ a rdf:Alt ;
-                                           rdf:label "tRtP4_5" ;
+                                           rdfs:label "tRtP4_5" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
                              tig:tRtP5_6 [ a rdf:Alt ;
-                                           rdf:label "tRtP5_6" ;
+                                           rdfs:label "tRtP5_6" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
                              tig:tRtP6_7 [ a rdf:Alt ;
-                                           rdf:label "tRtP6_7" ;
+                                           rdfs:label "tRtP6_7" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                              tig:tRtP7_8 [ a rdf:Alt ;
-                                           rdf:label "tRtP7_8" ;
+                                           rdfs:label "tRtP7_8" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
                              tig:tRtP8_9 [ a rdf:Alt ;
-                                           rdf:label "tRtP8_9" ;
+                                           rdfs:label "tRtP8_9" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
                              tig:tRtP9_10 [ a rdf:Alt ;
-                                           rdf:label "tRtP9_10" ;
+                                           rdfs:label "tRtP9_10" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                              tig:tRtP10_11 [ a rdf:Alt ;
-                                           rdf:label "tRtP10_11" ;
+                                           rdfs:label "tRtP10_11" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] 
                              tig:tRtP11_12 [ a rdf:Alt ;
-                                           rdf:label "tRtP11_12" ;
+                                           rdfs:label "tRtP11_12" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] ) ;
        pcs:hasRowLinksInversion (tig:tRtI1_2 [ a rdf:Alt ;
-                                           rdf:label "tRtI1_2" ;
+                                           rdfs:label "tRtI1_2" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI2_3 [ a rdf:Alt ;
-                                           rdf:label "tRtI2_3" ;
+                                           rdfs:label "tRtI2_3" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI3_4 [ a rdf:Alt ;
-                                           rdf:label "tRtI3_4" ;
+                                           rdfs:label "tRtI3_4" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI4_5 [ a rdf:Alt ;
-                                           rdf:label "tRtI4_5" ;
+                                           rdfs:label "tRtI4_5" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI5_6 [ a rdf:Alt ;
-                                           rdf:label "tRtI5_6" ;
+                                           rdfs:label "tRtI5_6" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI6_7 [ a rdf:Alt ;
-                                           rdf:label "tRtI6_7" ;
+                                           rdfs:label "tRtI6_7" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI7_8 [ a rdf:Alt ;
-                                           rdf:label "tRtI7_8" ;
+                                           rdfs:label "tRtI7_8" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI8_9 [ a rdf:Alt ;
-                                           rdf:label "tRtI8_9" ;
+                                           rdfs:label "tRtI8_9" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI9_10 [ a rdf:Alt ;
-                                           rdf:label "tRtI9_10" ;
+                                           rdfs:label "tRtI9_10" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI10_11 [ a rdf:Alt ;
-                                           rdf:label "tRtI10_11" ;
+                                           rdfs:label "tRtI10_11" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ]
                                  tig:tRtI11_12 [ a rdf:Alt ;
-                                           rdf:label "tRtI11_12" ;
+                                           rdfs:label "tRtI11_12" ;
                                            rdf:value 1 ; rdf:value 2 ; rdf:value 3 ; rdf:value 4 ; rdf:value 5 ; rdf:value 6 ; rdf:value 7 ; rdf:value 8 ; rdf:value 9 ; rdf:value 10 ; rdf:value 11 ] ) ] .
 
 tig:tRtP1_2 a tig:transposition ; 
