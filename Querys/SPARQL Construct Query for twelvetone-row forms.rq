@@ -1,0 +1,54 @@
+PREFIX tig: http://TIGroup.fun
+PREFIX pcs: http://PitchClassSet.fun
+
+CONSTRUCT {
+?RowTonePrime1 <1to2> ?RowTonePrime2 .
+?RowTonePrime2 <2to3> ?RowTonePrime3 .
+?RowTonePrime3 <3to4> ?RowTonePrime4 .
+?RowTonePrime4 <4to5> ?RowTonePrime5 .
+?RowTonePrime5 <5to6> ?RowTonePrime6 .
+?RowTonePrime6 <6to7> ?RowTonePrime7 .
+?RowTonePrime7 <7to8> ?RowTonePrime8 .
+?RowTonePrime8 <8to9> ?RowTonePrime9 .
+?RowTonePrime9 <9to10> ?RowTonePrime10 .
+?RowTonePrime10 <10to11> ?RowTonePrime11 .
+?RowTonePrime11 <11to12> ?RowTonePrime12 .
+?RowToneInversion1 <_1to2> ?RowToneInversion2 .
+?RowToneInversion2 <_2to3> ?RowToneInversion3 .
+?RowToneInversion3 <_3to4> ?RowToneInversion4 .
+?RowToneInversion4 <_4to5> ?RowToneInversion5 .
+?RowToneInversion5 <_5to6> ?RowToneInversion6 .
+?RowToneInversion6 <_6to7> ?RowToneInversion7 .
+?RowToneInversion7 <_7to8> ?RowToneInversion8 .
+?RowToneInversion8 <_8to9> ?RowToneInversion9 .
+?RowToneInversion9 <_9to10> ?RowToneInversion10 .
+?RowToneInversion10 <_10to11> ?RowToneInversion11 .
+?RowToneInversion11 <_11to12> ?RowToneInversion12 .
+}
+WHERE {
+?RowTonePrime1 tig:t8 ?RowTonePrime2 .
+?RowTonePrime2 tig:t11 ?RowTonePrime3 .
+?RowTonePrime3 tig:t4 ?RowTonePrime4 .
+?RowTonePrime4 tig:t11 ?RowTonePrime5 .
+?RowTonePrime5 tig:t11 ?RowTonePrime6 .
+?RowTonePrime6 tig:t6 ?RowTonePrime7 .
+?RowTonePrime7 tig:t10 ?RowTonePrime8 .
+?RowTonePrime8 tig:t3 ?RowTonePrime9 .
+?RowTonePrime9 tig:t10 ?RowTonePrime10 .
+?RowTonePrime10 tig:t4 ?RowTonePrime11.
+?RowTonePrime11 tig:t11 ?RowTonePrime12 .
+?RowToneInversion1 tig:t4 ?RowToneInversion2 .
+?RowToneInversion2 tig:t1 ?RowToneInversion3 .
+?RowToneInversion3 tig:t8 ?RowToneInversion4 .
+?RowToneInversion4 tig:t1 ?RowToneInversion5 .
+?RowToneInversion5 tig:t1 ?RowToneInversion6 .
+?RowToneInversion6 tig:t6 ?RowToneInversion7 .
+?RowToneInversion7 tig:t2 ?RowToneInversion8 .
+?RowToneInversion8 tig:t9 ?RowToneInversion9 .
+?RowToneInversion9 tig:t2 ?RowToneInversion10 .
+?RowToneInversion10 tig:t8 ?RowToneInversion11.
+?RowToneInversion11 tig:t1 ?RowToneInversion12 .
+
+FILTER(?RowTonePrime1 = pcs:Pc3 )
+FILTER(?RowToneInversion1 = pcs:Pc3 )
+}
