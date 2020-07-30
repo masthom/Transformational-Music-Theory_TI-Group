@@ -1,0 +1,70 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX pcs: <http://PitchClassSet.fun>  
+PREFIX tig: <http://TIGroup.fun> 
+
+ CONSTRUCT {      <Link#1Content> <value> <t6> . 
+                  <Link#1Content> <name> ?Label1 .
+                  <Link#1> <first> <Link#1Content> .
+                  ?ZZZ <rest> <Link#1> .
+                  ?ZZZ <first> ?VVV .
+                  <Link#1> <first> <AlternativeValues> .  
+                  <AlternativeValues> rdf:value ?XY1 .
+                  <Link#1> <rest> ?y1 .
+                  ?y1 <first> ?YY1 .
+                  ?y1 <rest> <Link#2> .
+                  ?RowTone1 tig:t6 ?RowTone2 .
+                  tig:t6 <value> <t6> .
+                
+                  <Link#2Content> <value> <t1> .
+                  <Link#2Content> <name> ?Label2 .
+                  <Link#2> <first> <Link#2Content> .
+          	      <Link#2> <rest> ?y2 .
+               	?y2 <rest> <Link#3> .
+                  ?RowTone2 tig:t1 ?RowTone3 .
+                  tig:t1 <value> <t1> .
+
+                  <Link#3Content> <value> <t2> .
+                  <Link#3Content> <name> ?Label3 .
+                  <Link#3> <first> <Link#3Content> .
+          	      <Link#3> <rest> ?y3 .
+               	?y3 <rest> ?z3 .
+                  ?RowTone3 tig:t2 ?RowTone4 .
+                  tig:t2 <value> <t2> .
+                            }
+
+ WHERE { 	?Link1 rdf:value 6 . 
+            ?Link1 rdfs:label ?Label1 .
+            ?x1 rdf:first ?Link1 .
+            ?ZZZ rdf:rest ?x1 .
+            ?ZZZ rdf:first ?VVV .
+            ?x1 rdf:first ?xx1 .    
+            ?xx1 rdf:value ?XY1 .
+            ?x1 rdf:rest ?y1 . 
+            ?y1 rdf:first ?YY1 .
+            ?y1 rdf:rest ?x2 .
+            ?RowTone1 tig:t6 ?RowTone2 .
+            tig:t6 rdf:value 6 .
+            
+            ?Link2 rdf:value 1 . 
+            ?Link2 rdfs:label ?Label2 .
+            ?x2 rdf:first ?Link2 .
+            ?x2 rdf:rest ?y2 .
+            ?y2 rdf:rest ?x3 .
+            ?RowTone2 tig:t1 ?RowTone3 .
+            tig:t1 rdf:value 1 .
+
+             ?Link3 rdf:value 2 . 
+            ?Link3 rdfs:label ?Label3 .
+            ?x3 rdf:first ?Link3 .
+            ?x3 rdf:rest ?y3 .
+            ?y3 rdf:rest ?z3 .
+            ?RowTone3 tig:t2 ?RowTone4 .
+            tig:t2 rdf:value 2 .
+
+   FILTER (?Label1 = "tRtP1_2")
+   FILTER (?Label2 = "tRtP2_3")
+   FILTER (?RowTone1 = pcs:Pc1)
+ }
