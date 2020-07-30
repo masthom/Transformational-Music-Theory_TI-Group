@@ -55,44 +55,56 @@ pcs:Pci11 a pcs:Pci ;
 
 # Transpositions and their relations to Pci:
 tig:t0 a tig:transposition ; 
+         rdf:value 0; 
        owl:inverseOf tig:t0 ; 
        tig:transposeBy pcs:Pci0 .
 tig:t1 a tig:transposition ; 
+         rdf:value 1; 
        owl:inverseOf tig:t11 ; 
        tig:transposeBy pcs:Pci1 .
 tig:t2 a tig:transposition ; 
+         rdf:value 2; 
        owl:inverseOf tig:t10 ; 
        tig:transposeBy pcs:Pci2 .
 tig:t3 a tig:transposition ; 
+         rdf:value 3; 
        owl:inverseOf tig:t9 ; 
        tig:transposeBy pcs:Pci3 .
 tig:t4 a tig:transposition ; 
+         rdf:value 4; 
        owl:inverseOf tig:t8 ; 
        tig:transposeBy pcs:Pci4 .
 tig:t5 a tig:transposition ; 
+         rdf:value 5; 
        owl:inverseOf tig:t7 ; 
        tig:transposeBy pcs:Pci5 .
 tig:t6 a tig:transposition ; 
+         rdf:value 6; 
        owl:inverseOf tig:t6 ; 
        tig:transposeBy pcs:Pci6 .
 tig:t7 a tig:transposition ; 
+         rdf:value 7; 
        owl:inverseOf tig:t5 ; 
        tig:transposeBy pcs:Pci7 .
 tig:t8 a tig:transposition ; 
+         rdf:value 8; 
        owl:inverseOf tig:t4 ; 
        tig:transposeBy pcs:Pci8 .
 tig:t9 a tig:transposition ; 
+         rdf:value 9; 
        owl:inverseOf tig:t3 ; 
        tig:transposeBy pcs:Pci9 .
 tig:t10 a tig:transposition ; 
+         rdf:value 10; 
        owl:inverseOf tig:t2 ; 
        tig:transposeBy pcs:Pci10 .
 tig:t11 a tig:transposition ; 
+         rdf:value 11; 
        owl:inverseOf tig:t1 ; 
        tig:transposeBy pcs:Pci11 .
 
 # Inversions and their relations to a Pc-axis (informal):
-tig:i0 a tig:inversion ; ##tig:i0 a shortcut for (tig:t0 + tig:t0)?
+tig:i0 a tig:inversion ; ##tig:i0 a shortcut for (tig:tx + tig:ty)?
        owl:inverseOf tig:i0 ; 
        tig:invertBy [ a rdf:Alt ; 
                         pcs:_PossibleAxis1 pcs:Pc0 ;
