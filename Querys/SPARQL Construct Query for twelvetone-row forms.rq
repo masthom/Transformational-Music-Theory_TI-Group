@@ -1,5 +1,5 @@
-PREFIX tig: http://TIGroup.fun
-PREFIX pcs: http://PitchClassSet.fun
+PREFIX tig: http://TIGroup.fun/
+PREFIX pcs: http://PitchClassSet.fun/
 
 CONSTRUCT {
 ?RowTonePrime1 <1to2> ?RowTonePrime2 .
