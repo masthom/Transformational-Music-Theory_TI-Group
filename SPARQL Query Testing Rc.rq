@@ -1,8 +1,8 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX pcs: <http://PitchClassSet.fun>  
-PREFIX tig: <http://TIGroup.fun> 
+PREFIX pcs: <http://PitchClassSet.fun/>  
+PREFIX tig: <http://TIGroup.fun/> 
 
  CONSTRUCT {      <Link#1Content> <value> <t6> . 
                   <Link#1Content> <name> ?Label1 .
