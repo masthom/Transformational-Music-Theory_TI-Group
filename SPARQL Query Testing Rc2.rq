@@ -1,0 +1,33 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX pcs: <http://PitchClassSet.fun/>  
+prefix tig: <http://TIGroup.fun/>
+
+ CONSTRUCT  {
+  ?X pcs:hasSuccessor ?Y .
+  ?XX owl:inverseOf ?YY .
+  <RowClass> ?a tig:tRtP1_2 .
+   			tig:tRtP1_2 <value> <VirtualValues1_2> . 
+   <VirtualValues1_2> <value> <t8>.
+   <RowClass> ?b tig:tRtP2_3 .
+   			tig:tRtP2_3 <value> <VirtualValues2_3> . 
+   <VirtualValues2_3> <value> <t11> .
+  <RowClass> ?c tig:tRtP3_4 .
+   			tig:tRtP3_4 <value> <VirtualValues3_4> . 
+   <VirtualValues3_4> <value> <t4> .
+}
+ WHERE { 
+	  ?X pcs:hasSuccessor ?Y .
+  ?XX owl:inverseOf ?YY .
+	pcs:Rc ?a tig:tRtP1_2 .
+    tig:tRtP1_2 rdf:value ?A .
+   ?A rdf:value 8 .
+   pcs:Rc ?b tig:tRtP2_3 .
+    tig:tRtP2_3 rdf:value ?B .
+   ?B rdf:value 11 .
+  pcs:Rc ?c tig:tRtP3_4 .
+    tig:tRtP3_4 rdf:value ?C .
+   ?C rdf:value 4 .
+ }
