@@ -539,70 +539,94 @@ pcs:Rc a owl:Thing ;
                         tig:tRtI10_11 , 
                         tig:tRtI11_12 .
 
-tig:tRtP1_2 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ; ##owl:oneOf has classes as domain, but the row links are properties?
+tig:tRtP1_2 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ; ##owl:oneOf has classes as domain, but the row links are properties?
             pcs:hasSuccessor tig:tRtP2_3 ; 
             owl:inverseOf tig:tRtI1_2 . 
-tig:tRtP2_3 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtP2_3 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtP3_4 ; 
             owl:inverseOf tig:tRtI2_3 .
-tig:tRtP3_4 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 )  ;
+tig:tRtP3_4 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 )  ;
             pcs:hasSuccessor tig:tRtP4_5 ; 
             owl:inverseOf tig:tRtI3_4 .
-tig:tRtP4_5 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtP4_5 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtP5_6 ; 
             owl:inverseOf tig:tRtI4_5 .
-tig:tRtP5_6 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtP5_6 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtP6_7 ; 
             owl:inverseOf tig:tRtI5_6 .
-tig:tRtP6_7 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtP6_7 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtP7_8 ; 
             owl:inverseOf tig:tRtI6_7 .
-tig:tRtP7_8 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtP7_8 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtP8_9 ; 
             owl:inverseOf tig:tRtI7_8 .
-tig:tRtP8_9 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtP8_9 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtP9_10 ; 
             owl:inverseOf tig:tRtI8_9 .
-tig:tRtP9_10 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtP9_10 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtP10_11 ; 
             owl:inverseOf tig:tRtI9_10 .
-tig:tRtP10_11 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtP10_11 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtP11_12 ; 
             owl:inverseOf tig:tRtI9_10 .
-tig:tRtP11_12 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtP11_12 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             owl:inverseOf tig:tRtI9_10 .       
-tig:tRtI1_2 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI1_2 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI2_3 ; 
             owl:inverseOf tig:tRtP1_2 . 
-tig:tRtI2_3 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI2_3 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI3_4 ; 
             owl:inverseOf tig:tRtP2_3 .
-tig:tRtI3_4 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI3_4 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI4_5 ; 
             owl:inverseOf tig:tRtP3_4 .
-tig:tRtI4_5 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI4_5 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI5_6 ; 
             owl:inverseOf tig:tRtP4_5 .
-tig:tRtI5_6 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI5_6 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI6_7 ; 
             owl:inverseOf tig:tRtP5_6 .
-tig:tRtI6_7 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI6_7 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI7_8 ; 
             owl:inverseOf tig:tRtP6_7 .
-tig:tRtI7_8 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI7_8 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI8_9 ; 
             owl:inverseOf tig:tRtP7_8 .
-tig:tRtI8_9 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI8_9 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI9_10 ; 
             owl:inverseOf tig:tRtP8_9 .
-tig:tRtI9_10 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI9_10 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI10_11 ; 
             owl:inverseOf tig:tRtP9_10 .
-tig:tRtI10_11 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI10_11 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             pcs:hasSuccessor tig:tRtI11_12 ; 
             owl:inverseOf tig:tRtP10_11 .
-tig:tRtI11_12 owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
+tig:tRtI11_12 a pcs:RowLink ; 
+            owl:oneOf ( tig:t1 tig:t2 tig:t3 tig:t4 tig:t5 tig:t6 tig:t7 tig:t8 tig:t9 tig:t10 tig:t11 ) ;
             owl:inverseOf tig:tRtP11_12 .
+
+            ##to be added: tRtRx_y and tRtRIx_y. 
 
 pcs:RForm rdfs:subClassOf pcs:Rc .
 
